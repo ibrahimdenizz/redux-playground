@@ -6,12 +6,12 @@ const CartItem = (props) => {
   const dispatch = useDispatch();
   const { title, quantity, total, price, id } = props.item;
 
-  function increaseItemQuantity() {
-    dispatch(cartActions.increaseItemQuantity({ id }));
+  function addItemToCart() {
+    dispatch(cartActions.addItemToCart({ id }));
   }
 
-  function decreaseItemQuantity() {
-    dispatch(cartActions.decreaseItemQuantity({ id }));
+  function removeItemToCart() {
+    dispatch(cartActions.removeItemToCart({ id }));
   }
 
   return (
@@ -28,8 +28,8 @@ const CartItem = (props) => {
           x <span>{quantity}</span>
         </div>
         <div className={classes.actions}>
-          <button onClick={decreaseItemQuantity}>-</button>
-          <button onClick={increaseItemQuantity}>+</button>
+          <button onClick={removeItemToCart}>-</button>
+          <button onClick={addItemToCart}>+</button>
         </div>
       </div>
     </li>

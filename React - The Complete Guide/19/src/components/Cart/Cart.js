@@ -10,9 +10,9 @@ const Cart = (props) => {
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
-        {cartItems.map(({ id, title, quantity, price }) => (
+        {cartItems.map(({ id, title, quantity, price, totalPrice }) => (
           <CartItem
-            item={{ id, title, quantity, price, total: price * quantity }}
+            item={{ id, title, quantity, price, total: totalPrice }}
             key={id}
           />
         ))}
