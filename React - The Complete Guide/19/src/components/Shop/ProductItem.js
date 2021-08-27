@@ -5,6 +5,7 @@ import classes from "./ProductItem.module.css";
 
 const ProductItem = (props) => {
   const dispatch = useDispatch();
+
   const { id, title, price, description } = props;
 
   function addItemToCart() {
